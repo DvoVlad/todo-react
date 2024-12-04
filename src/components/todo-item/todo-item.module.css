@@ -1,0 +1,10 @@
+.item {
+  color: #24bb24;
+}
+
+.editButton {
+  margin-left: 10px;
+  border:  1px solid #24bb24;
+  padding: 5px;
+  color: #24bb24;
+}

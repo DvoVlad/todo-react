@@ -9,13 +9,14 @@
 }
 
 .title {
-  color: green;
+  color: #24bb24;
   font-size: 16px;
 }
 
 .input {
-  border: 1px solid green;
-  min-height: 30px;
+  border: 1px solid #24bb24;
+  border-radius: 4px;
+  height: 30px;
   width: 270px;
   box-sizing: border-box;
   padding: 10px;
@@ -23,7 +24,22 @@
 
 .submit {
   font-family: inherit;
-  min-height: 30px;
-  border: 1px solid green;
-  background-color: skyblue;
+  height: 30px;
+  border: 1px solid #24bb24;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #24bb24;
+}
+
+.submit:active {
+  background-color: #24bb24;
+}
+
+.todoList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
 }

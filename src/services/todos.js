@@ -18,10 +18,19 @@ const todosSlice = createSlice({
         const uuid = uuidv4();
         return { payload: { ...item, uuid, done: false } }
       },
+    },
+    toggleTodo: (state, action) => {
+      state.items = state.items.map((item) => item.uuid === action.payload ? {...item, done: !item.done} : item)
+    },
+    updateTodo: (state, action) => {
+      state.items = state.items.map((item) => item.uuid === action.payload.uuid ? {...item, value: action.payload.value} : item)
+    },
+    deleteTodo: (state, action) => {
+      state.items = state.items.filter((item) => item.uuid !== action.payload.uuid);
     }
   }
 });
 
-export const { addTodo } = todosSlice.actions;
+export const { addTodo, toggleTodo, updateTodo, deleteTodo } = todosSlice.actions;
 
 export default todosSlice.reducer;
