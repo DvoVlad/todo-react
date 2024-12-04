@@ -26,7 +26,7 @@ const todosSlice = createSlice({
       state.items = state.items.map((item) => item.uuid === action.payload.uuid ? {...item, value: action.payload.value} : item)
     },
     deleteTodo: (state, action) => {
-      state.items = state.items.filter((item) => item.uuid !== action.payload.uuid);
+      state.items = state.items.filter((item) => item.uuid !== action.payload);
     }
   }
 });

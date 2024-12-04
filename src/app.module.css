@@ -9,26 +9,28 @@
 }
 
 .title {
-  color: #24bb24;
-  font-size: 16px;
+  color: #777777;
+  font-size: 36px;
 }
 
 .input {
-  border: 1px solid #24bb24;
+  border: 1px solid #0c6d0c;
   border-radius: 4px;
   height: 30px;
   width: 270px;
   box-sizing: border-box;
   padding: 10px;
+  font-size: 18px;
 }
 
 .submit {
   font-family: inherit;
   height: 30px;
-  border: 1px solid #24bb24;
+  border: 1px solid #0c6d0c;
   border-radius: 4px;
   background-color: transparent;
-  color: #24bb24;
+  color: #0c6d0c;
+  padding: 4px;
 }
 
 .submit:active {

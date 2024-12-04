@@ -1,5 +1,6 @@
 .item {
-  color: #24bb24;
+  color: #b42b08;
+  font-size: 17px;
 }
 
 .editButton {
@@ -7,4 +8,17 @@
   border:  1px solid #24bb24;
   padding: 5px;
   color: #24bb24;
+  background-color: transparent;
+}
+
+.deleteButton {
+  margin-left: 10px;
+  border:  1px solid #ff9305;
+  padding: 5px;
+  color: #ff9305;
+  background-color: transparent;
+}
+
+.done {
+  color: #147714;
 }

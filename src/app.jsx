@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import styles from './app.module.css'
 import { useDispatch } from 'react-redux'
-import { addTodo, toggleTodo, updateTodo } from './services/todos';
+import { addTodo, toggleTodo, updateTodo, deleteTodo } from './services/todos';
 import { useSelector } from 'react-redux';
 
 import TodoItem from './components/todo-item/todo-item';
@@ -17,6 +17,7 @@ function App() {
     if(value) {
       dispatch(addTodo({ value }));
       refInput.current.value = '';
+      refInput.current.focus();
     }
   }
 
@@ -28,6 +29,10 @@ function App() {
     dispatch(updateTodo({ uuid, value }));
   }
 
+  const deleteTodoItem = (uuid) => {
+    dispatch(deleteTodo(uuid));
+  }
+
   return (
     <>
       <form className={styles.form} onSubmit={onSubmit}>
@@ -37,7 +42,7 @@ function App() {
         <ul className={styles.todoList}>
           {todoItems.map((item) => (
             <li key={item.uuid}>
-              <TodoItem {...item} changeCheck={changeCheck} updateTodoItem={updateTodoItem}/>
+              <TodoItem {...item} changeCheck={changeCheck} updateTodoItem={updateTodoItem} deleteTodoItem={deleteTodoItem}/>
             </li>
           ))}
         </ul>
