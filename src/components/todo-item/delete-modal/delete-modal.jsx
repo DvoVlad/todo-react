@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import ModalOverlay from './modal-overlay/modal-overlay';
 import styles from "./delete-modal.module.css";
+import PropTypes from 'prop-types';
 
 const modalRoot = document.getElementById("react-modals"); 
 
@@ -33,6 +34,11 @@ function DeleteModal({ onClose, onSubmit }) {
       modalRoot
     )
   );
+}
+
+DeleteModal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired
 }
 
 export default DeleteModal

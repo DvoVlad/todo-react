@@ -1,6 +1,7 @@
 import styles from './todo-item.module.css'
 import { useState } from 'react';
 import DeleteModal from './delete-modal/delete-modal';
+import PropTypes from 'prop-types';
 
 function TodoItem({uuid, value, done, changeCheck, updateTodoItem, deleteTodoItem}) {
   const [isEdit, setIsEdit] = useState(false);
@@ -42,6 +43,15 @@ function TodoItem({uuid, value, done, changeCheck, updateTodoItem, deleteTodoIte
       {isDelete && <DeleteModal onClose={onCloseModal} onSubmit={onDeleteSubmit} />}
     </div>
   )
+}
+
+TodoItem.propTypes = {
+  uuid: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  done: PropTypes.bool.isRequired,
+  changeCheck: PropTypes.func.isRequired,
+  updateTodoItem: PropTypes.func.isRequired,
+  deleteTodoItem: PropTypes.func.isRequired
 }
 
 export default TodoItem;
