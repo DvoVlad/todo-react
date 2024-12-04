@@ -4,7 +4,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
-  width: 720px;
+  width: 600px;
   min-height: 200px;
   background-color: rgba(28, 28, 33, 1);
   border-radius: 40px;
@@ -17,14 +17,17 @@
   right: 40px;
   border: none;
   background-color: transparent;
-  padding: 0;
+  padding: 10px;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 12px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
 }
 
 .title {
   color: #962e0e;
   font-size: 30px;
+  margin-bottom: 90px;
 }
 
 .submitButton {
