@@ -38,7 +38,7 @@ function TodoItem({uuid, value, done, changeCheck, updateTodoItem, deleteTodoIte
         <input onChange={() => changeCheck(uuid)} type="checkbox" checked={done} />
         <input onChange={onChangeTodo} type="text" value={value} />
         <button className={styles.editButton} onClick={toggleEdit} type="button">Готово</button>
-        <button onClick={onOpenModal} type='button'>Удалить</button>
+        <button className={styles.deleteButton} onClick={onOpenModal} type='button'>Удалить</button>
       </>
       }
       {isDelete && <DeleteModal onClose={onCloseModal} onSubmit={onDeleteSubmit} />}
