@@ -30,13 +30,13 @@ function TodoItem({uuid, value, done, changeCheck, updateTodoItem, deleteTodoIte
     <div className={styles.item}>
       {!isEdit ? <>
         <input onChange={() => changeCheck(uuid)} type="checkbox" checked={done} />
-        <span className={`${done ? styles.done: ''}`}>{value}</span>
+        <span className={`${styles.todoName} ${done ? styles.done: ''}`}>{value}</span>
         <button className={styles.editButton} onClick={toggleEdit} type="button">Редактировать</button>
         <button className={styles.deleteButton} onClick={onOpenModal} type='button'>Удалить</button>
       </> :
       <>
         <input onChange={() => changeCheck(uuid)} type="checkbox" checked={done} />
-        <input onChange={onChangeTodo} type="text" value={value} />
+        <input className={styles.editField} onChange={onChangeTodo} type="text" value={value} />
         <button className={styles.editButton} onClick={toggleEdit} type="button">Готово</button>
         <button className={styles.deleteButton} onClick={onOpenModal} type='button'>Удалить</button>
       </>

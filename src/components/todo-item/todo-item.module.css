@@ -22,3 +22,15 @@
 .done {
   color: #147714;
 }
+
+.editField {
+  height: 27px;
+  font-size: 17px;
+  width: 175px;
+}
+
+.todoName {
+  max-width: 130px;
+  display: inline-block;
+  vertical-align: top;
+}
