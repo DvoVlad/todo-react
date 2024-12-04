@@ -6,8 +6,16 @@ import PropTypes from 'prop-types';
 function TodoItem({uuid, value, done, changeCheck, updateTodoItem, deleteTodoItem}) {
   const [isEdit, setIsEdit] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
-  const toggleEdit = () => {
-    setIsEdit(!isEdit);
+  const openEdit = () => {
+    setIsEdit(true);
+  }
+
+  const closeEdit = () => {
+    if(value === '') {
+      onOpenModal()
+      return;
+    }
+    setIsEdit(false);
   }
 
   const onChangeTodo = (e) => {
@@ -32,11 +40,11 @@ function TodoItem({uuid, value, done, changeCheck, updateTodoItem, deleteTodoIte
       <input onChange={() => changeCheck(uuid)} type="checkbox" checked={done} />
       {!isEdit ? <>
         <span className={`${styles.todoName} ${done ? styles.done: ''}`}>{value}</span>
-        <button className={styles.editButton} onClick={toggleEdit} type="button">Редактировать</button>
+        <button className={styles.editButton} onClick={openEdit} type="button">Редактировать</button>
       </> :
       <>
         <input className={styles.editField} onChange={onChangeTodo} type="text" value={value} />
-        <button className={styles.editButton} onClick={toggleEdit} type="button">Готово</button>
+        <button className={styles.editButton} onClick={closeEdit} type="button">Готово</button>
       </>
       }
       <button className={styles.deleteButton} onClick={onOpenModal} type='button'>Удалить</button>

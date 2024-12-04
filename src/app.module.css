@@ -11,13 +11,15 @@
 .title {
   color: #777777;
   font-size: 36px;
+  margin-top: 0;
 }
 
 .input {
   border: 1px solid #0c6d0c;
   border-radius: 4px;
   height: 30px;
-  width: 270px;
+  width: 260px;
+  margin-right: 10px;
   box-sizing: border-box;
   padding: 10px;
   font-size: 18px;

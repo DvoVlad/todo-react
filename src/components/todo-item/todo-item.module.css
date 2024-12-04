@@ -33,4 +33,5 @@
   max-width: 130px;
   display: inline-block;
   vertical-align: top;
+  word-break: break-all;
 }
