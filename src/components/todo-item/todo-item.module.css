@@ -6,6 +6,7 @@
 .editButton {
   margin-left: 10px;
   border:  1px solid #24bb24;
+  border-radius: 4px;
   padding: 5px;
   color: #24bb24;
   background-color: transparent;
@@ -14,6 +15,7 @@
 .deleteButton {
   margin-left: 10px;
   border:  1px solid #ff9305;
+  border-radius: 4px;
   padding: 5px;
   color: #ff9305;
   background-color: transparent;
